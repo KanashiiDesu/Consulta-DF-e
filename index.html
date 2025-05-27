@@ -165,47 +165,6 @@
   </style>
 </head>
 <body>
-
-<!-- CONTADOR DE ACESSOS COM FIREBASE -->
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-  import { getDatabase, ref, get, set, increment, update } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
-
-  // config firebase
-  const firebaseConfig = {
-    apiKey: "AIzaSyByd-TokbGrEo616bnxrqvM32jPDihwUqY",
-    authDomain: "consultadfe-2a039.firebaseapp.com",
-    projectId: "consultadfe-2a039",
-    storageBucket: "consultadfe-2a039.firebasestorage.app",
-    messagingSenderId: "901754061488",
-    appId: "1:901754061488:web:2cc951ac00ea5673dd7175"
-  };
-
-  // Inicializa Firebase
-  const app = initializeApp(firebaseConfig);
-  const db = getDatabase(app);
-  const contadorRef = ref(db, "contador/visitas");
-
-  // Incrementa e exibe contador
-  get(contadorRef).then(snapshot => {
-    let atual = 0;
-    if (snapshot.exists()) {
-      atual = snapshot.val();
-    }
-    // incrementa localmente
-    const novoValor = atual + 1;
-    document.getElementById("contador").textContent = novoValor;
-
-    // salva no banco
-    set(contadorRef, novoValor);
-  }).catch(error => {
-    console.error("Erro ao acessar Firebase:", error);
-  });
-</script>
-
-<p style="margin-top: 10px; font-size: 0.9rem; color: white;">
-  Total de acessos: <strong id="contador">...</strong>
-</p>
   
   <div class="container">
     <h1>Consulta DF-e</h1>
