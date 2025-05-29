@@ -5,7 +5,7 @@
   <title>Consulta DF-e</title>
   <link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="%23004d38"/><stop offset="100%" stop-color="%23007a53"/></linearGradient></defs><path fill="url(%23grad)" d="M0 64C0 28.7 28.7 0 64 0L224 0l0 128c0 17.7 14.3 32 32 32l128 0 0 288c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 64zm384 64l-128 0L256 0 384 128z"/></svg>'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<style class="">
+<style>
     * {
       box-sizing: border-box;
       margin: 0;
@@ -14,10 +14,10 @@
     }
 
     body {
-      background: linear-gradient(135deg, #004d38, #006a4e); /* Ajuste no gradiente */
+      background: linear-gradient(135deg, #004d38, #006a4e); 
       min-height: 100vh;
       display: flex;
-      flex-direction: column; /* Para posicionar a assinatura */
+      flex-direction: column; 
       justify-content: center;
       align-items: center;
       color: #ffffff;
@@ -25,55 +25,45 @@
     }
 
     .container {
-      background-color: #ffffff; /* Branco sólido para melhor contraste do conteúdo */
-      padding: 35px 45px; /* Leve ajuste no padding */
-      border-radius: 15px; /* Bordas mais arredondadas */
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra mais suave */
-      max-width: 500px; /* Leve aumento na largura máxima */
+      background-color: #ffffff; 
+      padding: 35px 45px; 
+      border-radius: 15px; 
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+      max-width: 500px; 
       width: 100%;
       text-align: center;
       color: #333333;
     }
 
     h1 {
-      margin-bottom: 35px; /* Maior margem inferior */
+      margin-bottom: 35px; 
       font-weight: 700;
-      font-size: 1.8rem; /* Tamanho ligeiramente ajustado */
+      font-size: 1.8rem; 
       color: #004d38;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    h1 .fa-file-invoice-dollar {
-        margin-right: 12px; /* Espaço entre ícone e texto */
-        font-size: 2.2rem; /* Ícone um pouco maior que o texto */
-    }
-
     .document-section {
         margin-bottom: 30px;
         padding: 20px;
-        background-color: #f8f9fa; /* Fundo sutil para cada seção */
+        background-color: #f8f9fa; 
         border-radius: 10px;
-        border: 1px solid #e9ecef; /* Borda leve */
+        border: 1px solid #e9ecef; 
     }
     .document-section:last-of-type {
         margin-bottom: 0;
     }
 
     label {
-      display: flex; /* Para alinhar ícone e texto */
+      display: flex; 
       align-items: center;
       font-weight: 600;
       margin-bottom: 12px;
-      font-size: 1.05rem; /* Leve ajuste */
+      font-size: 1.05rem; 
       text-align: left;
-      color: #005a40; /* Tom de verde um pouco diferente */
-    }
-
-    label .fa-solid {
-        margin-right: 8px;
-        color: #004d38;
+      color: #005a40; 
     }
 
     .input-wrapper {
@@ -92,17 +82,17 @@
 
     input[type="text"] {
       width: 100%;
-      padding: 12px 15px 12px 40px; /* Padding esquerdo para o ícone */
+      padding: 12px 15px 12px 40px; 
       border-radius: 8px;
-      border: 1px solid #ced4da; /* Borda mais suave por padrão */
+      border: 1px solid #ced4da; 
       font-size: 1rem;
       color: #495057;
       background-color: #fff;
     }
 
     input[type="text"]:focus {
-      border-color: #007a53; /* Cor de foco verde */
-      box-shadow: 0 0 0 0.2rem rgba(0, 122, 83, 0.25); /* Sombra de foco correspondente */
+      border-color: #007a53; 
+      box-shadow: 0 0 0 0.2rem rgba(0, 122, 83, 0.25); 
       outline: none;
     }
 
@@ -110,15 +100,15 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px; /* Espaço entre ícone e texto no botão */
+      gap: 10px; 
       margin-top: 10px;
-      padding: 12px 25px; /* Padding ajustado */
-      font-size: 1rem; /* Tamanho da fonte ajustado */
-      font-weight: 600; /* Peso da fonte */
+      padding: 12px 25px; 
+      font-size: 1rem; 
+      font-weight: 600; 
       border: none;
       border-radius: 8px;
-      background-color: #ffb700; /* Amarelo/Laranja principal */
-      color: #3d2800; /* Cor de texto escura para contraste com amarelo */
+      background-color: #ffb700; 
+      color: #3d2800; 
       cursor: pointer;
       transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
       width: 100%;
@@ -126,11 +116,11 @@
     }
 
     button .fa-solid {
-        font-size: 1.1em; /* Ícone ligeiramente maior no botão */
+        font-size: 1.1em; 
     }
 
     button:hover {
-      background-color: #e6a200; /* Amarelo mais escuro no hover */
+      background-color: #e6a200; 
       transform: translateY(-2px);
       box-shadow: 0 4px 10px rgba(0,0,0, 0.15);
     }
@@ -141,9 +131,9 @@
     }
 
     p.info {
-      font-size: 0.8rem; /* Texto informativo menor */
+      font-size: 0.8rem; 
       color: #555555;
-      margin-top: 10px; /* Espaçamento superior */
+      margin-top: 10px; 
       text-align: left;
       line-height: 1.4;
     }
@@ -154,15 +144,85 @@
     }
 
     .assinatura {
-      margin-top: 30px; /* Espaço acima da assinatura */
+      margin-top: 30px; 
       font-size: 0.85rem;
-      color: rgba(255, 255, 255, 0.7); /* Cor mais clara */
+      color: rgba(255, 255, 255, 0.7); 
       font-style: italic;
       user-select: none;
       pointer-events: none;
-      font-weight: 400; /* Peso da fonte mais leve */
+      font-weight: 400; 
     }
-  </style>
+
+    .modal {
+      display: none; 
+      position: fixed; 
+      z-index: 1000; 
+      left: 0;
+      top: 0;
+      width: 100%; 
+      height: 100%; 
+      overflow: auto; 
+      background-color: rgba(0,0,0,0.5); 
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      width: 90%;
+      max-width: 400px; 
+      text-align: center;
+      color: #333;
+    }
+
+    .modal-content h2 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      color: #004d38; 
+      font-size: 1.5rem;
+    }
+    
+    .modal-content p {
+      margin-bottom: 25px;
+      line-height: 1.6;
+      font-size: 0.95rem;
+      text-align: left; 
+    }
+
+    .modal-buttons {
+      display: flex;
+      justify-content: flex-end; 
+      gap: 10px; 
+      margin-top: 20px;
+    }
+
+    .modal-buttons button {
+      flex: 0 1 auto; 
+      padding: 10px 20px; 
+      font-weight: 500;
+      border-radius: 6px;
+    }
+    
+    .modal-buttons .confirm-action-btn { 
+        background-color: #007a53; 
+        color: white;
+    }
+    .modal-buttons .confirm-action-btn:hover {
+        background-color: #006a4e;
+    }
+
+    .modal-buttons .cancel-action-btn { 
+        background-color: #dc3545; 
+        color: white;
+    }
+    .modal-buttons .cancel-action-btn:hover {
+        background-color: #c82333;
+    }
+</style>
 </head>
 <body>
   
@@ -216,6 +276,17 @@
 
   <div class="assinatura">by Thalis Gomes</div>
 
+  <div id="infoModal" class="modal">
+    <div class="modal-content">
+      <h2 id="infoModalTitleText"></h2> 
+      <p id="infoModalMessage"></p>
+      <div class="modal-buttons">
+        <button class="confirm-action-btn" id="confirmModalActionBtn">OK</button> 
+        <button class="cancel-action-btn" id="cancelModalActionBtn" style="display: none;">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
   <script>
     function somenteNumeros(event) {
       const input = event.target;
@@ -250,17 +321,101 @@
       }
     });
 
+    const infoModal = document.getElementById('infoModal');
+    const infoModalTitleElement = document.getElementById('infoModalTitleText'); 
+    const infoModalMessage = document.getElementById('infoModalMessage');
+    const confirmModalActionBtn = document.getElementById('confirmModalActionBtn');
+    const cancelModalActionBtn = document.getElementById('cancelModalActionBtn');
+
+    let specificModalConfirmAction = null; 
+
+    function showInfoModal(title, message, confirmAction = null, showCancelBtn = false, isErrorType = true) {
+        if (infoModalTitleElement) {
+            infoModalTitleElement.textContent = title;
+            if (isErrorType) {
+                infoModalTitleElement.style.color = '#dc3545'; 
+            } else {
+                infoModalTitleElement.style.color = '#004d38'; 
+            }
+        }
+
+        if (infoModalMessage) infoModalMessage.innerHTML = message.replace(/\n/g, '<br>');
+        
+        specificModalConfirmAction = confirmAction;
+
+        if (showCancelBtn && cancelModalActionBtn) {
+            cancelModalActionBtn.style.display = 'inline-flex';
+        } else if (cancelModalActionBtn) {
+            cancelModalActionBtn.style.display = 'none';
+        }
+        
+        if(confirmModalActionBtn) {
+            confirmModalActionBtn.textContent = showCancelBtn ? 'Continuar' : 'OK';
+        }
+
+        if (infoModal) infoModal.style.display = 'flex';
+    }
+
+    function handleModalConfirmAndHide() {
+        if (infoModal) infoModal.style.display = 'none';
+        if (typeof specificModalConfirmAction === 'function') {
+            specificModalConfirmAction(); 
+        }
+        cleanupModalState();
+    }
+
+    function handleModalCancelAndHide() {
+        if (infoModal) infoModal.style.display = 'none';
+        cleanupModalState();
+    }
+
+    function cleanupModalState() {
+        specificModalConfirmAction = null; 
+        if (cancelModalActionBtn) cancelModalActionBtn.style.display = 'none';
+        if (confirmModalActionBtn) confirmModalActionBtn.textContent = 'OK'; 
+        if (infoModalTitleElement) infoModalTitleElement.style.color = '#004d38'; 
+    }
+
+
+    if (confirmModalActionBtn) {
+        confirmModalActionBtn.addEventListener('click', handleModalConfirmAndHide);
+    }
+    if (cancelModalActionBtn) {
+        cancelModalActionBtn.addEventListener('click', handleModalCancelAndHide);
+    }
+    
+    window.addEventListener('click', (event) => {
+        if (event.target == infoModal) { 
+            handleModalCancelAndHide(); 
+        }
+    });
+
+
     const btnConsultarMdfe = document.getElementById('consultar-mdfe');
     if (btnConsultarMdfe) {
       btnConsultarMdfe.addEventListener('click', () => {
         const input = document.getElementById('chave-mdfe');
         const chave = input.value.trim();
         if (chave.length === 44) {
-          const url = `https://dfe-portal.svrs.rs.gov.br/mdfe/qrCode?chMDFe=${chave}&tpAmb=1`;
-          window.open(url, '_blank');
-          input.value = '';
+          const modeloDocumento = chave.substring(20, 22); 
+          
+          if (modeloDocumento === '58') { // MDF-e
+            const url = `https://dfe-portal.svrs.rs.gov.br/mdfe/qrCode?chMDFe=${chave}&tpAmb=1`;
+            window.open(url, '_blank');
+            input.value = ''; 
+          } else if (modeloDocumento === '57') { // CT-e
+            showInfoModal('Tipo de Documento Incorreto', 'A chave inserida no campo MDF-e é de um CT-e (modelo 57).\n\nPor favor, utilize o campo "Chave do CT-e" ou insira uma chave de MDF-e válida.', null, false, true);
+            input.value = ''; 
+          } else if (modeloDocumento === '55') { // NF-e
+            showInfoModal('Tipo de Documento Incorreto', 'A chave inserida no campo MDF-e é de uma NF-e (modelo 55).\n\nPor favor, utilize o "Portal Oficial NF-e" ou insira uma chave de MDF-e válida.', null, false, true);
+            input.value = ''; 
+          } else {
+            showInfoModal('Chave de MDF-e Inválida', `A chave inserida (modelo ${modeloDocumento || 'desconhecido'}) não parece ser de um MDF-e (modelo 58).\n\nVerifique a chave.`, null, false, true);
+            input.value = ''; 
+          }
         } else {
-          alert('Por favor, insira uma chave do MDF-e válida com 44 números.');
+          showInfoModal('Chave de MDF-e Inválida', 'Por favor, insira uma chave do MDF-e válida com 44 números.', null, false, true);
+          input.value = ''; 
         }
       });
     }
@@ -268,9 +423,6 @@
     const btnConsultarNfe = document.getElementById('consultar-nfe');
     if (btnConsultarNfe) {
       btnConsultarNfe.addEventListener('click', () => {
-        alert(
-          'Você será redirecionado para o portal oficial da NF-e. Lá, insira a chave e resolva o hCaptcha.'
-        );
         window.open(
           'https://www.nfe.fazenda.gov.br/portal/consultaRecaptcha.aspx?tipoConsulta=resumo&tipoConteudo=7PhJ+gAVw2g=',
           '_blank'
@@ -284,11 +436,25 @@
         const input = document.getElementById('chave-cte');
         const chave = input.value.trim();
         if (chave.length === 44) {
-          const url = `https://dfe-portal.svrs.rs.gov.br/cte/qrCode?chCTe=${chave}&tpAmb=1`;
-          window.open(url, '_blank');
-          input.value = '';
+          const modeloDocumento = chave.substring(20, 22); 
+
+          if (modeloDocumento === '57') { // CT-e
+            const url = `https://dfe-portal.svrs.rs.gov.br/cte/qrCode?chCTe=${chave}&tpAmb=1`;
+            window.open(url, '_blank');
+            input.value = ''; 
+          } else if (modeloDocumento === '58') { // MDF-e
+            showInfoModal('Tipo de Documento Incorreto', 'A chave inserida no campo CT-e é de um MDF-e (modelo 58).\n\nPor favor, utilize o campo "Chave do MDF-e" ou insira uma chave de CT-e válida.', null, false, true);
+            input.value = ''; 
+          } else if (modeloDocumento === '55') { // NF-e
+             showInfoModal('Tipo de Documento Incorreto', 'A chave inserida no campo CT-e é de uma NF-e (modelo 55).\n\nPor favor, utilize o "Portal Oficial NF-e" ou insira uma chave de CT-e válida.', null, false, true);
+             input.value = ''; 
+          } else {
+            showInfoModal('Chave de CT-e Inválida', `A chave inserida (modelo ${modeloDocumento || 'desconhecido'}) não parece ser de um CT-e (modelo 57).\n\nVerifique a chave.`, null, false, true);
+            input.value = ''; 
+          }
         } else {
-          alert('Por favor, insira uma chave do CT-e válida com 44 números.');
+          showInfoModal('Chave de CT-e Inválida', 'Por favor, insira uma chave do CT-e válida com 44 números.', null, false, true);
+          input.value = ''; 
         }
       });
     }
